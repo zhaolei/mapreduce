@@ -25,7 +25,7 @@ import org.apache.hadoop.util.GenericOptionsParser;
 import org.apache.hadoop.util.StringUtils;
 
 
-public class WordCount {
+public class WordCount0 {
 
     public static class WordCountMapper extends MapReduceBase implements Mapper<Object, Text, Text, IntWritable> {
         private final static IntWritable one = new IntWritable(1);
@@ -58,14 +58,13 @@ public class WordCount {
     
     
     public static void main(String[] args) throws Exception {
-        String input = "hdfs://127.0.0.1:9000/data/d1/";
-        String output = "hdfs://127.0.0.1:9000/data/out/o2";
+
+	for(String s:args) {
+		System.out.println(s);
+	}
 
         JobConf conf = new JobConf(WordCount.class);
-        conf.setJobName("WordCount");
-        conf.addResource("classpath:/hadoop/core-site.xml");
-        conf.addResource("classpath:/hadoop/hdfs-site.xml");
-        conf.addResource("classpath:/hadoop/mapred-site.xml");
+        conf.setJobName("WordCount By ZhaoLei");
 
         conf.setOutputKeyClass(Text.class);
         conf.setOutputValueClass(IntWritable.class);
@@ -77,8 +76,8 @@ public class WordCount {
         conf.setInputFormat(TextInputFormat.class);
         conf.setOutputFormat(TextOutputFormat.class);
 
-        FileInputFormat.setInputPaths(conf, new Path(input));
-        FileOutputFormat.setOutputPath(conf, new Path(output));
+        FileInputFormat.setInputPaths(conf, new Path(args[0]));
+        FileOutputFormat.setOutputPath(conf, new Path(args[1]));
 
         JobClient.runJob(conf);
         System.exit(0);
