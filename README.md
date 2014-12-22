@@ -7,5 +7,6 @@ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DgroupId=
 Run class
 --------------------
 mvn exec:java -Dexec.mainClass="org.zhaolei.Kmeans"
+mvn exec:java -Dexec.mainClass="org.zhaolei.Kmeans"  -Dexec.args="arg0 arg1 arg2"
 
 mapreduce study self
