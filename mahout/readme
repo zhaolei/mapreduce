@@ -1,1 +1,3 @@
 mahout self
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes 
+-DgroupId=org.conan.mymahout -DartifactId=myMahout -DpackageName=org.conan.mymahout -Dversion=1.0-SNAPSHOT -DinteractiveMode=false
