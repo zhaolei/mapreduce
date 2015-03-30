@@ -4,13 +4,17 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+        <property>
+                <name>io.file.buffer.size</name>
+                <value>131072</value>
+        </property>
+        <property>
+                <name>hadoop.tmp.dir</name>
+                <value>/www/data/tmp</value>
+        </property>
+        <property>  
+                <name>fs.default.name</name>  
+                <value>hdfs://localhost:9000</value>  
+        </property> 
 
-   <property>  
-           <name>fs.default.name</name>  
-                   <value>hdfs://localhost:9000</value>  
-                       </property>  
-                           <property>  
-                                   <name>hadoop.tmp.dir</name>  
-                                           <value>/www/hadoop/tmp</value>  
-                                               </property>  
 </configuration>
