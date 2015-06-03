@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
@@ -58,8 +59,8 @@ public class WordCount {
     
     
     public static void main(String[] args) throws Exception {
-        String input = "hdfs://127.0.0.1:9000/data/d1/";
-        String output = "hdfs://127.0.0.1:9000/data/out/o2";
+        String input = "hdfs://127.0.0.1:9000/data/txt/d1/";
+        String output = "hdfs://127.0.0.1:9000/data/out/d11";
 
         JobConf conf = new JobConf(WordCount.class);
         conf.setJobName("WordCount");

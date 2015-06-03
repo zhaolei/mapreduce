@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+<property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/www/data/name26</value>
+</property>
+<property>
+        <name>dfs.namenode.data.dir</name>
+        <value>/www/data/namenode26</value>
+</property>
+<property>
+        <name>dfs.replication</name>  
+        <value>1</value>
+</property>
+
+
+</configuration>
